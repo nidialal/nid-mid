@@ -6,13 +6,8 @@
 def palindrome?(str)
   # YOUR CODE HERE
   str1=str.downcase.gsub(/[^a-z]/i,'')
-  str2=str1.reverse
-  if(str1==str2)
-	return true
-  else
-	return false
+  str1==str1.reverse
   end
-end
 
 def count_words(str)
   arr=str.downcase.split(%r{\b})

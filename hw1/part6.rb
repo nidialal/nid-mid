@@ -22,10 +22,9 @@ end
 
 module Enumerable
   def palindrome?
-	str=""
-    self.each_with_index do |ind|
-	  str=str+ind.to_s
+	wrd=self.inject("") do |str,elm|
+	  str+elm.to_s
 	end
-	str==str.reverse
+	wrd==wrd.reverse
   end
 end
